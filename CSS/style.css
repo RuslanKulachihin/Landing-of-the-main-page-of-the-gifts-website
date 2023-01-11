@@ -1,0 +1,1113 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Wancho&family=Ubuntu:ital,wght@0,400;0,500;1,300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400&display=swap');
+
+/* Обнуление */
+
+* {
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+*,
+*:before,
+*:after {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+:focus,
+:active {
+  outline: none;
+}
+a:focus,
+a:active {
+  outline: none;
+}
+
+nav,
+footer,
+header,
+aside {
+  display: block;
+}
+
+html,
+body {
+  height: 100%;
+  max-width: 100%;
+  min-width: 0;
+  margin: 0px auto;
+  font-size: 100%;
+  line-height: 1;
+  font-size: 14px;
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+}
+input,
+button,
+textarea {
+  font-family: inherit;
+}
+
+input::-ms-clear {
+  display: none;
+}
+button {
+  cursor: pointer;
+}
+button::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+a,
+a:visited {
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: none;
+}
+ul li {
+  list-style: none;
+}
+img {
+  vertical-align: top;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: inherit;
+  font-weight: 400;
+}
+/*--------------------*/
+body {
+  font-family: 'Regular', 'Ubuntu','Courier New';
+  color: #000000;
+
+}
+
+.wrap{
+  max-width: 1440px;
+  margin: 0px auto;
+}
+
+/* button properties */
+
+.button_border{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #F7941E;
+  border-radius: 5px;
+  width: 200px;
+  height: 50px;
+  transition-duration: 2s;
+}
+.button_border-text{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Montserrat';
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 22px;
+  text-transform: uppercase;
+  width: 100%;
+  color: #F7941E;
+  margin: 20px;
+
+}
+
+.button_border:hover {
+  background-color:#F7941E; 
+  color: #FFFFFF;
+  transition-duration: 1s;
+}
+
+.button_border-text:hover{
+  color: #FFFFFF;
+  font-size: 18px;
+  line-height: 22px;
+}/* menu*/
+
+.top__menu{
+	display: flex;
+  position: sticky;
+  top: 45px;
+	justify-content:space-between;
+  align-items: center;
+}
+
+.top__menu_logo{
+  display: flex;
+  align-items: center;
+}
+
+.top__menu_dox{
+  display: inline-flex;
+  align-items: center;
+  gap: 0px 2.5em;
+  padding: 2px 2px;
+  flex-wrap: wrap;
+}
+
+.top__menu_logo-text{
+  font-family: 'Montserrat';
+  font-size: 18px;
+  line-height: 22px;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  color: #000000;
+}
+
+.top__menu_button{
+  display: flex;
+  align-items: center;
+  width: fit-content;
+  height: 45px;
+}
+
+/* mobail-menu */
+
+:root{
+  --black: #000;
+  --white: #f9f9f9;
+  --black: #36383F;
+  --gray: #85888C;
+  --orange: #F7941E;
+}
+
+.nav{
+  width: 100%;
+  position: fixed;
+  overflow: hidden;
+ 
+}
+.top__menu_dox a{
+  display: block;
+  padding: 15px;
+  opacity: 1;
+}
+.top__menu_dox a:hover{
+  background-color: var(--orange,green);
+  background-color:#F7941E; 
+  color: #FFFFFF;
+  transition-duration: 1s;
+  opacity: 1;
+  border-radius: 10% ;
+}
+
+
+
+.nav{
+  max-height: 0;
+  transition: max-height .5s ease-out;
+}
+
+.hamb{
+  cursor: pointer;
+  float: right;
+  padding: 40px 20px;
+}
+
+/* Style label tag */
+ 
+.hamb-line {
+  background: var(--black);
+  display: block;
+  height: 2px;
+  position: relative;
+  width: 30px;
+  height: 3.5px;
+} 
+
+/* Style span tag */
+ 
+.hamb-line::before,
+.hamb-line::after{
+  background: var(--black);
+  content: '';
+  display: block;
+  height: 100%;
+  position: absolute;
+  transition: all .2s ease-out;
+  width: 100%;
+}
+
+.hamb-line::before{
+    top: 5px;
+}
+
+.hamb-line::after{
+    top: -5px;
+}
+ 
+.top__menu-mobaile {
+    display: none;
+
+} 
+
+/* Hide checkbox */
+
+.top__menu-mobaile:checked ~ nav{
+    max-height: 100%;
+}
+
+.top__menu-mobaile:checked ~ .hamb .hamb-line {
+    background: transparent;
+}
+
+.top__menu-mobaile:checked ~ .hamb .hamb-line::before {
+    transform: rotate(-45deg);
+    top:0;
+}
+
+.top__menu-mobaile:checked ~ .hamb .hamb-line::after {
+    transform: rotate(45deg);
+    top:0;
+}
+
+/* heder */
+.heder-color{
+  background-color: #F1F1F2;
+  
+}
+.header__romance{
+  display:flex;
+  justify-content: space-between;
+  padding: 0px 10px;
+  max-width: 1440px;
+  margin: 0px auto;
+
+  
+  min-height: 700px;
+  flex-wrap: nowrap;
+
+}
+.header__romance_info{
+  
+  width: 500px;
+  
+  margin: auto ;
+ 
+  text-align: left;
+  padding: 0px 0px 0px 70px;
+
+}
+.header__romance_info-box{
+  display: block;
+
+
+
+}
+.header__romance_info-title{
+  
+font-size: 56px;
+line-height: 69px;
+
+color: #000000;
+
+}
+.header__romance_info-subtitle{
+  font-family: 'Montserrat';
+  font-weight: 400;
+font-size: 24px;
+line-height: 140.62%;
+margin: 35px 0px 50px;
+
+
+
+color: #000000;
+
+}
+.header__romance_button  {
+
+}
+
+.header__romance_img{
+  display: block;
+  max-width: 100%;
+  max-height: 100%;
+  padding-left: 100px;
+
+}
+
+/* postcard */
+
+.header__postcard{
+  display: flex;
+  justify-content: space-between;
+  padding: 0px 10px;
+  flex-direction: row-reverse;
+  max-width: 1440px;
+  margin: 0px auto;
+
+  min-height: 600px;
+  flex-wrap: nowrap;
+}
+.header__postcard_img{
+
+  display: block;
+  max-width: 100%;
+  max-height: 100%;
+  
+  
+  padding-right: 5%;
+
+}
+.postcard-info{
+  width: 500px;
+  text-align: justify;
+  padding: 0px 10px 0px 50px ;
+}
+.header__postcard_info-title{
+  font-size: 32px;
+  line-height: 140.62%;
+
+}
+
+/* offers */
+
+.offers{
+
+  margin: 95px 0px 130px ;
+  min-height: 0px;
+}
+
+.offers__title{
+font-family:Poppins;
+font-weight: 400;
+font-size: 32px;
+line-height: 38px;
+text-align: center;
+color: #000000;
+
+}
+.offers__subtitle{
+  font-family:Poppins;
+font-weight: 400;
+font-size: 18px;
+line-height: 38px;
+
+text-align: center;
+
+color: #000000;
+margin: 25px 0px 64px;
+}
+
+.offers__boxs{
+    display: flex;
+    justify-content: space-around;
+    min-height: 435px;
+
+}
+
+.offers__box_events{
+  background: #FAFAFA;
+  box-shadow: none;
+  transition: all 0.3s ease;
+  border-radius: 5px;
+  box-shadow:30px rgba( #F1F1F2);
+  min-width: 270px;
+
+}
+
+.offers__box_events-img{}
+
+.offers__box_events-title{
+
+  margin: 25px 25px 74px;
+
+}
+.offers__box_events-buttom{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 15px ;
+  cursor: pointer;
+  
+  width: 100px;
+  min-height: 40px;
+  
+}
+
+.offers__box_events-buttomText{}
+
+/* orange */
+
+.orange__line{
+  display: flex;
+  justify-content: space-around;
+  background: #F7941E;
+  min-height: 250px;
+  align-items: center;
+
+
+}
+.orange__line_ask{
+
+}
+.orange__line_ask-title{
+  font-family: 'Poppins';
+  font-weight: 700;
+font-size: 32px;
+line-height: 140.62%;
+
+
+color: #000000;
+
+}
+
+.orange__line_ask-subtitle{
+  font-family: 'Poppins';
+  font-weight: 300;
+font-size: 32px;
+line-height: 45px;
+font-weight: 300;
+color: #000000;
+
+}
+
+.orange__line_buttons{
+
+  display: flex;
+  gap: 20px;
+  min-width: 420px;
+}
+.orange__line_buttons-bleck{
+  border: 2px solid #000;
+  background: #231F20;
+
+}
+.orange__line_buttons-bleck:hover{
+  background:#F7941E;
+}
+.orange__line_buttons-bleckTitle{
+
+  color:#fff;
+}
+.orange__line_buttons-bleckTitle:hover{
+  color: #fff;
+}
+
+.orange__line_buttons-orange{
+  border: 2px solid #000;
+  background:#F7941E;
+
+}
+.orange__line_buttons-orange:hover{
+ background: #231F20;
+}
+.orange__line_buttons-orangeTitle{
+ 
+  color: #fff;
+}
+
+/* offers */
+
+.offers__romance{
+  display: flex;
+  justify-content: center;
+  margin: 0px 10px;
+}
+.offers__romance-img{}
+
+.offers__romance_info{
+  background: #231F20;
+  min-height: 370px ;
+  padding: 60px 0px 50px 75px;
+}
+
+.offers__romance_info-tiile{
+  font-family: 'Poppins';
+  font-size: 14px;
+  line-height: 140.62%;
+  color: #FFFFFF;
+}
+
+.offers__romance_info-subtiile{
+  font-family: 'Poppins';
+  font-size: 48px;
+  line-height: 58px;
+  margin: 27px 0px 60px;
+  color: #FFFFFF;
+  max-width: 500px;
+}
+
+.offers__romance_info-button{
+  font-family: 'Poppins';
+  font-size: 18px;
+  line-height: 140.62%;
+  color: #FFFFFF;
+}
+
+.offers__romance_dubl{
+  width: 200px;
+  background: #231F20;
+}
+
+
+.offers__aboutRomance{
+  display: flex;
+  justify-content: space-between;
+  max-width: 1180px;
+  min-height: 290px;
+  margin: 40px auto;
+}
+
+.offers__aboutRomance-box{
+  max-width: 570px;
+  min-height: 290px;
+  padding: 50PX ;
+  margin: 0px 5px;
+  background: #FFFFFF;
+  border-radius: 25% ;
+  transition-duration: 1s;
+  cursor: pointer;
+}
+
+.offers__aboutRomance-box:hover{
+  background: #F7941E;
+  box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.05);
+  border-radius: 8% ;
+  transition-duration: 1s;
+}
+
+.offers__aboutRomance-title{
+  font-family: 'Poppins';
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 34px;
+  color: #000000;
+}
+
+.offers__aboutRomance-subtitle{
+  font-family: 'Poppins';
+  font-size: 18px;
+  line-height: 25px;
+  margin: 16px 0px 25px;
+  color: #000000;
+}
+
+.offers__aboutRomance-button{}
+
+.offers__aboutRomance-buttomText{
+  font-family: 'Poppins';
+  font-size: 14px;
+  line-height: 140.62%;
+  color: #000000;
+}
+
+/* footer */
+
+.footer{
+  display: flex;
+  justify-content: center;
+  margin: 80px auto;
+
+}
+.footer__nav{}
+
+.footer__menu{
+  display: flex;
+    justify-content: space-between;
+    min-width: 700px;
+    text-align: center;
+    margin: -20px 70px 50px ;
+}
+
+.footer__menu_text{
+  display: flex;
+  justify-content: space-around;
+  gap: 20px;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 140.62%;
+}
+
+.footer__menu_text-logo{
+  margin: 0px 80px ;
+}
+
+.footer__messengers{
+  display: flex;
+  justify-content:center;
+  gap: 25px;
+  margin: 55px 0px;
+}
+
+.footer__messengers_element{}
+
+.footer-line{
+  background: #000;
+  border: 1px solid #000;
+}
+
+.footer-line-element{
+   position: absolute;
+}
+
+.footer__privacyTerms{
+  display: flex;
+  justify-content: center;
+}
+
+.footer__privacyTerms-titlt{
+  font-family: 'Poppins';
+  font-size: 14px;
+  line-height: 140.62%;
+  margin: 35px 7px;
+  color: #000000;
+}
+/* media min 768px */
+
+@media(min-width: 768px) { 
+
+.menu-del{
+  display: none;
+}
+
+.top__menu{
+  margin: 45px 10px;
+  padding: 0px 5px ;
+}
+
+.nav{
+  max-height: none;
+  position: relative;
+  float: right;
+  width: fit-content;
+}
+
+.top__menu-mobaile li{
+  float: left;
+}
+
+.top__menu-mobaile a:hover{
+  background-color: transparent;
+  color: var(--gray);
+}
+ 
+.hamb{
+  display: none;
+  }
+}
+
+/* media 1250px*/
+
+@media (max-width:1250px){ 
+
+.header__romance{
+  display:flex;
+  justify-content: center;
+  flex-direction: column-reverse;
+  padding: 0px 10px ;
+  max-width: 100%;
+  margin: 0px auto;
+  flex-wrap: wrap;
+}
+
+.header__romance_info{
+  display:flex;
+  justify-content: center;
+  flex-direction: column;
+  width: 100%;
+  margin: 50px auto ;
+  text-align: left;
+  padding: 0px 5px;
+}
+
+.header__romance_info-box{
+  display: block;
+}
+
+.header__romance_info-title{
+  font-size: 56px;
+  line-height: 69px;
+  color: #000000;
+}
+
+.header__romance_info-subtitle{
+  font-size: 24px;
+  line-height: 140.62%;
+  margin: 35px 0px 50px;
+  color: #000000;
+}
+
+.header__romance_button  {}
+
+.header__romance_img{
+  display: block;
+  width: 99%;
+  padding-left: 0px;
+  background-size: cover;
+  padding-right: 0;
+  flex-direction: column-reverse;
+  margin: 0px auto;
+}
+
+/* postcard */
+
+.header__postcard{
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column-reverse;
+  max-width: 1440px;
+  margin: 0px auto;
+  min-height: 600px;
+  flex-wrap: wrap;
+}
+
+.header__postcard_img{
+  display: block;
+  width: 99%;
+  padding-left: 0px;
+  background-size: cover;
+  padding-right: 0;
+  flex-direction: column-reverse;
+  margin: 0px auto;
+}
+
+.postcard-info{
+  width: 100%;
+  text-align: justify;
+  flex-direction: column-reverse;
+}
+
+.header__postcard_info-title{
+  font-size: 32px;
+  line-height: 140.62%;
+}
+
+.offers__boxs{
+  display: flex;
+  justify-content: space-around;
+  min-height: 600px;
+  flex-wrap: wrap;
+  gap: 15px ;
+  margin: 10px 5px;
+}
+
+.offers__box_events{
+  display: flex;
+  justify-content: center;
+  transition: all 0.3s ease;
+  border-radius: 5px;
+  width: 100%;
+  gap: 10%;
+}
+
+.offers__box_events-img{}
+
+.offers__box_events-title{
+  margin: 90% 20px 30%;
+  text-align: left;
+}
+
+.offers__box_events-buttom{
+  display: flex;
+  justify-content: left;
+  align-items: flex-start;
+  margin: 15px ;
+  }
+}
+
+/* media 992px*/
+
+@media (max-width:992px){
+
+.header__romance{
+  display:flex;
+  justify-content: center;
+  flex-direction: column-reverse;
+  padding: 0px 10px ;
+  max-width: 100%;
+  margin: 0px auto;
+}
+
+.header__romance_info{
+  display:flex;
+  justify-content: center;
+  flex-direction: column;
+  width: 100%;
+  margin: 50px auto ;
+  text-align: left;
+  padding: 0px 5px;
+}
+
+.header__romance_info-box{
+  display: block;
+}
+
+.header__romance_info-title{
+font-size: 56px;
+line-height: 69px;
+color: #000000;
+}
+
+.header__romance_info-subtitle{
+font-size: 24px;
+line-height: 140.62%;
+margin: 35px 0px 50px;
+color: #000000;
+}
+
+.header__romance_button  {}
+
+.header__romance_img{}
+
+/* postcard */
+
+.header__postcard{
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column-reverse;
+  max-width: 1440px;
+  margin: 0px auto;
+  min-height: 600px;
+  flex-wrap: wrap;
+}
+
+.header__postcard_img{}
+
+.postcard-info{
+  width: 100%;
+  text-align: justify;
+  flex-direction: column-reverse;
+}
+
+.header__postcard_info-title{
+  font-size: 32px;
+  line-height: 140.62%;
+  }
+}
+
+/* media 998px*/
+
+@media (max-width: 998px){
+
+.offers__boxs{
+  display: flex;
+  justify-content: space-around;
+  min-height: 600px;
+  flex-wrap: wrap;
+  gap: 15px ;
+  margin: 10px 5px;
+}
+
+.offers__box_events{
+  display: flex;
+  justify-content: center;
+  transition: all 0.3s ease;
+  border-radius: 5px;
+  width: 100%;
+  gap: 10%;
+}
+
+.offers__box_events-img{}
+
+.offers__box_events-title{
+  margin: 90% 20px 30%;
+  text-align: left;
+}
+
+.offers__box_events-buttom{
+  display: flex;
+  justify-content: left;
+  align-items: flex-start;
+  margin: 15px ;
+  width: 100px;
+  height: 45px;
+}
+
+.offers__box_events-buttomText{}
+
+/* orange */
+
+.orange__line{
+  display: flex;
+  background: #F7941E;
+  min-height: 250px;
+  align-items: center;
+  flex-direction: column;
+}
+
+.offers__romance_dubl{
+  display: none;
+  width: 200px;
+  background: #231F20;
+  }
+}
+
+/* media 768px */
+@media(max-width: 767px) {
+
+.top__menu{
+  display: flex;
+  position: fixed;
+  justify-content:space-between;
+  align-items: center;
+  width: 100%;
+  padding: 0px 0px ;
+  background-color: var(--orange);
+  top: 0;
+  opacity: 0.9;
+}
+
+.top__menu_logo{
+  margin: 0px 15px;
+}
+
+.hamb{
+  margin: 0px 15px;
+}
+
+.nav{
+  top: 83px;
+  background-color: var(--white);
+}
+
+.top__menu_dox{
+  display: block;
+  align-items: center;
+  gap: 0px 2.5em;
+  padding: 2px 2px;
+  flex-wrap: wrap;
+}
+
+.top__menu_button{
+    display: none;
+}
+
+/* offers */
+
+.offers__romance{
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  margin: 0px 10px;
+}
+
+.offers__romance-img{}
+
+.offers__romance_info{
+  background: #231F20;
+  min-height: 370px ;
+  padding: 60px 5% 50px ;
+}
+
+.offers__romance_info-tiile{
+  font-family: 'Gilroy';
+  font-size: 14px;
+  line-height: 140.62%;
+  color: #FFFFFF;
+}
+
+.offers__romance_info-subtiile{
+  font-family: 'Gilroy';
+  font-size: 48px;
+  line-height: 58px;
+  margin: 27px 0px 60px;
+  color: #FFFFFF;
+  max-width: 500px;
+}
+
+.offers__romance_info-button{
+  font-family: 'Gilroy';
+  font-size: 18px;
+  line-height: 140.62%;
+  color: #FFFFFF;
+}
+
+.offers__romance_dubl{
+  width: 200px;
+  background: #231F20;
+}
+
+.offers__aboutRomance{
+  display: flex;
+  justify-content: space-between;
+  max-width: 1180px;
+  min-height: 290px;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  margin: 40px auto;
+}
+
+.footer__menu{
+  display: none;
+}
+
+.footer-line{
+  background: #000;
+  display: none;
+}
+
+.footer__messengers{
+  display: flex;
+  justify-content:center;
+  gap: 25px;
+  margin: 0px 0px;
+}
+
+.offers{
+  margin: 95px 0px 45px ;
+  min-height: 0px;
+  }
+}
+
+/*media 576px*/
+
+@media (max-width:576px){
+
+.offers__boxs{
+  display: flex;
+  justify-content: right;
+  min-height: 0px;
+  flex-wrap: wrap;
+  gap: 15px ;
+  margin: 10px 5px;
+}
+
+.offers__box_events{
+  display: block;
+  transition: all 0.3s ease;
+  border-radius: 5px;
+  width: 100%;
+}
+.offers__box_events-img{
+  display: flex;
+  justify-content: center;
+  max-width: 100%;
+}
+
+.offers__box_events-title{
+  margin: 30px 20px 30px;
+  text-align: center;
+}
+
+.offers__box_events-buttom{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0px auto ;
+  width: 100px;
+}
+
+.offers__box_events-buttomText{}
+
+}
+
+.orange__line_buttons{
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  min-width: 0px;
+}
