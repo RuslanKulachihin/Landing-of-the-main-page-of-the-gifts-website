@@ -827,7 +827,7 @@ color: #000000;
   flex-direction: column-reverse;
   padding: 0px 10px ;
   max-width: 100%;
-  margin: 0px auto;
+  margin: 100px auto 0;
 }
 
 .header__romance_info{
